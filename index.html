@@ -2,19 +2,105 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
+    <title>Buy list</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<body>
-    <div>
-        <div>
+<body style="background-color: lightgray">
+   <div class="main-container">
+       <div class="left box">
+            <div class="content-box">
+                <input type="text" placeholder="Назва товару">
+                <button><b>Add</b></button>
+            </div>
+           <div class="item-line">
+               <div class="name">
+                    Orange
+               </div>
+               <div class="quantity-control">
+                   <button class="decrease"><b>-</b></button>  <span>1</span>  <button class="increase"><b>+</b></button>
+               </div>
+               <div class="buttons">
+                   <button class="bought">Bought</button>  <button class="delete">X</button>
+               </div>
+           </div>
+           <div class="item-line">
+               <div class="name">
+                   Carrot
+               </div>
+               <div class="quantity-control">
+                   <button class="decrease"><b>-</b></button>  <span>1000</span>  <button class="increase"><b>+</b></button>
+               </div>
+               <div class="buttons">
+                   <button class="bought">Bought</button>  <button class="delete">X</button>
+               </div>
+           </div>
+           <div class="item-line">
+               <div class="name">
+                   Pineapple
+               </div>
+               <div class="quantity-control">
+                   <button class="decrease"><b>-</b></button>  <span>2</span>  <button class="increase"><b>+</b></button>
+               </div>
+               <div class="buttons">
+                   <button class="bought">Bought</button>  <button class="delete">X</button>
+               </div>
+           </div>
+           <div class="item-line">
+               <div class="name">
+                   Lime
+               </div>
+               <div class="quantity-control">
+                   <button class="decrease"><b>-</b></button>  <span>10</span>  <button class="increase"><b>+</b></button>
+               </div>
+               <div class="buttons">
+                   <button class="bought">Bought</button>  <button class="delete">X</button>
+               </div>
+           </div>
+           <div class="item-line">
+               <div class="name">
+                   Cherry
+               </div>
+               <div class="quantity-control">
+                   <button class="decrease"><b>-</b></button>  <span>100</span>  <button class="increase"><b>+</b></button>
+               </div>
+               <div class="buttons">
+                   <button class="bought">Bought</button>  <button class="delete">X</button>
+               </div>
+           </div>
+       </div>
+       <div class="right box">
+           <div class="content-box heading">
+                <b>Left</b>
+           </div>
+           <div class="resizable-box">
+                <span class="item-box">
+                    <span class="item-name">Tomato</span>
+                    <span class="item-counter">100</span>
+                </span>
+               <span class="item-box">
+                    <span class="item-name">Onion</span>
+                    <span class="item-counter">1</span>
+                </span>
+               <span class="item-box">
+                    <span class="item-name">Cucumber</span>
+                    <span class="item-counter">2</span>
+                </span>
+               <span class="item-box">
+                    <span class="item-name">Banana</span>
+                    <span class="item-counter">1000000</span>
+                </span>
+           </div>
+           <div class="content-box heading">
+                <b>Bought</b>
+           </div>
+           <div class="resizable-box bottom">
+                <span class="item-box">
+                    <span class="item-name">Apple</span>
+                    <span class="item-counter">51</span>
+                </span>
+           </div>
+       </div>
 
-        </div>
-        <div>
-
-        </div>
-    </div>
+   </div>
 </body>
 </html>

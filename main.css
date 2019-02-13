@@ -1,0 +1,200 @@
+.main-container{
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    width: 90%;
+}
+
+.box{
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 15px;
+    background-color: white;
+}
+
+.right{
+    width: 250px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    width: 450px;
+    flex: 2 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box{
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-box input{
+    height: 85%;
+    width: 85%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 10px;
+}
+
+.content-box button {
+    height: 85%;
+    display: inline-block;
+    width: 15%;
+    box-sizing: content-box;
+    background-color: rgb(66, 134, 244);
+    border-color: rgb(66, 134, 244);
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.content-box button:hover{
+    background-color: rgb(60, 110, 200);
+    border-color: rgb(60, 110, 200);
+}
+
+.resizable-box{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+}
+
+.item-box{
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-name{
+    font-size: 12px;
+    padding: 5px;
+    margin-right: 2px;
+}
+
+.item-counter{
+    display: inline-block;
+    background-color: rgb(244, 176, 66);
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+
+    min-width: 15px;
+    min-height: 15px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.bottom{
+    border-bottom: none;
+}
+
+.item-line {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid lightgray;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.name{
+    margin-left: 10px;
+    width: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.quantity-control{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.quantity-control button{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: white;
+}
+
+.quantity-control span{
+    margin-right: 5px;
+    margin-left: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    background-color: lightgrey;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px;
+
+}
+
+.increase{
+    background-color: green;
+}
+
+.increase:hover{
+    background-color: darkgreen;
+}
+
+.decrease{
+    background-color: red;
+}
+
+.decrease:hover{
+    background-color: darkred;
+}
+
+.buttons{
+    margin-right: 10px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.bought{
+    background-color: lightgrey;
+    border-color: lightgrey;
+    margin-right: 5px;
+
+}
+
+.bought:hover{
+    background-color: darkgray;
+    border-color: darkgray;
+}
+
+.delete{
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.delete:hover{
+    background-color: darkred;
+    border-color: darkred;
+}
+
