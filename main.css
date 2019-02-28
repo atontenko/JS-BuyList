@@ -245,6 +245,12 @@ body{
     color: white;
 }
 
+.disabled {
+    pointer-events: none;
+    background-color: lightcoral;
+    border-color: lightcoral;
+}
+
 .delete:hover{
     background-color: darkred;
     border-color: darkred;
@@ -285,3 +291,6 @@ button:hover::after {
     visibility: visible;
 }
 
+.bought-item {
+    text-decoration: line-through;
+}

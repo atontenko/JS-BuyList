@@ -4,90 +4,50 @@
     <meta charset="UTF-8">
     <title>Buy list</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
    <div class="main-container">
-       <div class="left box"><div class="content-box">
-                <input type="text" placeholder="Назва товару">
-                <button data-tooltip="Add item"><b>Add</b></button>
-            </div>
-           <div class="item-line">
-               <div class="name">
-                    Orange
-               </div>
-               <div class="quantity-control">
-                   <button class="decrease" data-tooltip="Decrease amount"><b>-</b></button>
-                   <span>1</span>
-                   <button class="increase" data-tooltip="Increase amount"><b>+</b></button>
-               </div>
-               <div class="buttons">
-                   <button class="bought" data-tooltip="Move item to bought items">Bought</button>
-                   <button class="delete" data-tooltip="Delete item ">X</button>
-               </div>
-           </div>
-           <div class="item-line">
-               <div class="name">
-                   Apple
-               </div>
-               <div class="quantity-control">
-                   <button class="decrease" data-tooltip="Decrease amount"><b>-</b></button>
-                   <span>1</span>
-                   <button class="increase" data-tooltip="Increase amount"><b>+</b></button>
-               </div>
-               <div class="buttons">
-                   <button class="bought" data-tooltip="Move item to bought items">Bought</button>
-                   <button class="delete" data-tooltip="Delete item ">X</button>
-               </div>
-           </div>
-           <div class="item-line">
-               <div class="name">
-                   Banana
-               </div>
-               <div class="quantity-control">
-                   <button class="decrease" data-tooltip="Decrease amount"><b>-</b></button>
-                   <span>1</span>
-                   <button class="increase" data-tooltip="Increase amount"><b>+</b></button>
-               </div>
-               <div class="buttons">
-                   <button class="bought" data-tooltip="Move item to bought items">Bought</button>
-                   <button class="delete" data-tooltip="Delete item ">X</button>
-               </div>
-           </div>
+       <div id="product-list" class="left box">
+           <form class="content-box">
+                <input id="input-field" type="text" placeholder="Назва товару">
+                <button id="add-button" data-tooltip="Add item"><b>Add</b></button>
+           </form>
        </div>
        <div class="right box">
-           <div class="content-box heading">
-                <b>Left</b>
-           </div>
-           <div class="resizable-box">
-                <span class="item-box">
-                    <span class="item-name">Orange</span>
-                    <span class="item-counter">1</span>
-                </span>
-               <span class="item-box">
-                    <span class="item-name">Apple</span>
-                    <span class="item-counter">1</span>
-                </span>
-               <span class="item-box">
-                    <span class="item-name">Banana</span>
-                    <span class="item-counter">1</span>
-                </span>
-           </div>
-           <div class="content-box heading">
-                <b>Bought</b>
-           </div>
-           <div class="resizable-box bottom">
-                <span class="item-box">
-                    <span class="item-name">Apple</span>
-                    <span class="item-counter">51</span>
-                </span>
-           </div>
+           <div class="content-box heading">    <b>Left</b>     </div>
+           <div id="not-bought-box" class="resizable-box"></div>
+           <div class="content-box heading">    <b>Bought</b>   </div>
+           <div id='bought-box' class="resizable-box bottom"></div>
        </div>
-
    </div>
-    <div class="badge">
+   <div class="badge">
         <div class="header">Buy List</div>
         <div class="created">Created by:</div>
         <div class="author">Anton Butenko</div>
     </div>
+   <div id="item-line-template" class="item-line" style="display: none">
+       <div class="name">
+           <input id="rename-input" style="display:none;" type="text" placeholder="Нова назва">
+           <span id = "name-span"></span>
+           <span id = "not-bought-name-span" style="display: none; text-decoration: line-through"></span>
+       </div>
+       <div class="quantity-control">
+           <button id="minus-button" class="decrease disabled" data-tooltip="Decrease amount"><b>-</b></button>
+           <span id="quantity-span">1</span>
+           <button id="plus-button" class="increase" data-tooltip="Increase amount"><b>+</b></button>
+       </div>
+       <div class="buttons">
+           <button id='not-bought-button' class="bought" style="display: none" data-tooltip="Move out item from bought items">Not bought</button>
+           <button id="bought-button" class="bought" data-tooltip="Move item to bought items">Bought</button>
+           <button id="delete-button" class="delete" data-tooltip="Delete item ">X</button>
+       </div>
+   </div>
+
+   <span id ="item-box-template" class="item-box" style="display: none">
+        <span class="item-name">Orange</span>
+        <span id='item-counter' class="item-counter">1</span>
+   </span>
 </body>
 </html>
